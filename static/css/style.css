@@ -1,0 +1,57 @@
+/* Paleta de cores lúdica */
+:root {
+    --primary-color: #4facfe;    /* Azul céu */
+    --secondary-color: #00f2fe; /* Ciano vivo */
+    --success-color: #00ca91;   /* Verde menta */
+    --warning-color: #f6d365;   /* Amarelo sol */
+    --danger-color: #ff758c;    /* Rosa/Vermelho suave */
+    --bg-light: #f0f4f8;        /* Cinza azulado bem claro */
+}
+
+body {
+    background-color: var(--bg-light);
+    color: #444;
+}
+
+/* Deixando a Navbar mais moderna e menos "quadrada" */
+.navbar {
+    background: linear-gradient(120deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Cards com "Cara de App" */
+.card-materia {
+    border-radius: 20px !important; /* Bordas bem redondas são mais amigáveis */
+    border: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-materia:hover {
+    transform: translateY(-8px); /* Flutua um pouco mais */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    border-color: var(--primary-color);
+}
+
+/* Ícones grandes e coloridos */
+.display-4 i {
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+}
+
+/* Botões arredondados (Pill) */
+.btn-rounded {
+    border-radius: 50px;
+    padding: 8px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Customizando a barra de progresso ou badges */
+.badge-custom {
+    background-color: var(--warning-color);
+    color: #664d03;
+    border-radius: 10px;
+    padding: 5px 12px;
+}
