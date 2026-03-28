@@ -2,8 +2,8 @@ from models import db, Conteudo
 
 class Conteudo_Service():
     @staticmethod
-    def criar_conteudo(titulo, descricao=None):
-        nova = Conteudo(titulo=titulo, descricao=cor)
+    def criar_conteudo(titulo, materia_id, descricao=None):
+        nova = Conteudo(titulo=titulo, materia_id=materia_id, descricao=cor)
         db.session.add(nova)
         db.session.commit()
         return nova
@@ -18,13 +18,15 @@ class Conteudo_Service():
         
     
     @staticmethod
-    def atualizar_conteudo(conteudo_id, novo_titulo=None, nova_descricao=None):
+    def atualizar_conteudo(conteudo_id, nova_materia_id=None, novo_titulo=None, nova_descricao=None):
         conteudo = Conteudo.query.get(conteudo_id)
         if conteudo:
             if novo_titulo:
                 conteudo.titulo = novo_titulo
             if nova_descricao:
                 conteudo.descricao = nova_descricao
+            if nova_materia_id:
+                conteudo.materia_id = nova_materia_id
             db.session.commit()
         return None
     
