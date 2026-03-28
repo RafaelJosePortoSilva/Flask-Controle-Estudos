@@ -1,5 +1,4 @@
 from models import db, Materia
-from datetime import datetime
 
 class Materia_Service():
     @staticmethod
