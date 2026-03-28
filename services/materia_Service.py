@@ -22,9 +22,9 @@ class Materia_Service():
     def atualizar_materia(materia_id, novo_nome=None, nova_cor=None):
         materia = Materia.query.get(materia_id)
         if materia:
-            if nome:
+            if novo_nome:
                 materia.nome = novo_nome
-            if cor:
+            if nova_cor:
                 materia.cor = nova_cor
             db.session.commit()
         return None
