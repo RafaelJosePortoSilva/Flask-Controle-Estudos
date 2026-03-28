@@ -3,7 +3,7 @@ from models import db, Conteudo
 class Conteudo_Service():
     @staticmethod
     def criar_conteudo(titulo, materia_id, descricao=None):
-        nova = Conteudo(titulo=titulo, materia_id=materia_id, descricao=cor)
+        nova = Conteudo(titulo=titulo, materia_id=materia_id, descricao=descricao)
         db.session.add(nova)
         db.session.commit()
         return nova
