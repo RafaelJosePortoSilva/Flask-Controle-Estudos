@@ -2,8 +2,8 @@ from models import db, Tarefa
 
 class Tarefa_Service():
     @staticmethod
-    def criar_tarefa(descricao, concluida=False):
-        nova = Tarefa(descricao=descricao, concluida=concluida)
+    def criar_tarefa(descricao, materia_id, concluida=False):
+        nova = Tarefa(descricao=descricao, materia_id=materia_id,concluida=concluida)
         db.session.add(nova)
         db.session.commit()
         return nova
